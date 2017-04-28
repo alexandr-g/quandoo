@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log*
+
+# Dependency directory
+node_modules
+
+# IDEA/Webstorm project files
+.idea
+*.iml
+
+# Mac files
+.DS_Store
