@@ -1,8 +1,8 @@
 let api = {
-  getBio(username) {
+  getBio (username) {
     username = username.toLowerCase().trim()
     let url = `https://api.github.com/users/${username}`
-    
+
     return fetch(url).then((res) => res.json())
   }
 }
