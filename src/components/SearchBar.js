@@ -1,10 +1,12 @@
 import React from 'react'
+import api from '../utils/api'
 
 class SearchBar extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      username: ''
+      username: '',
+      userInfo: undefined
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -15,12 +17,13 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit (event) {
-    console.log('A name was submitted: ' + this.state.username)
+    api.getBio(this.state.username)
+      .then((response) => { this.setState({ userInfo: response }) })
     event.preventDefault()
+    this.setState({ username: '' }) // clean input
   }
 
   render () {
-    console.log(this.state)
     return (
       <form onSubmit={this.handleSubmit}>
         <div className='container-fluid'>
@@ -33,6 +36,7 @@ class SearchBar extends React.Component {
             onChange={this.handleChange}
           />
         </div>
+        <p>Press Enter to fetch user info:</p>
       </form>
     )
   }
