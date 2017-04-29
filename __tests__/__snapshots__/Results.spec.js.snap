@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`results list is rendered with user info object 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="card-block"
+  >
+    <ul
+      className="list-group"
+    >
+      <li
+        className="list-group-item"
+      >
+        Name: 
+        test
+      </li>
+      <li
+        className="list-group-item"
+      >
+        Login: 
+        test login
+      </li>
+      <li
+        className="list-group-item"
+      >
+        Location: 
+        planet earth
+      </li>
+      <li
+        className="list-group-item"
+      >
+        Bio: 
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`results list is rendered without user info object 1`] = `
+<div>
+  Loading...
+</div>
+`;
