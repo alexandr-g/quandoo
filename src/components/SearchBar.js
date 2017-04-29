@@ -1,12 +1,13 @@
 import React from 'react'
 import api from '../utils/api'
+import Results from './Results'
 
 class SearchBar extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       username: '',
-      userInfo: undefined
+      userInfo: {}
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -36,7 +37,9 @@ class SearchBar extends React.Component {
             onChange={this.handleChange}
           />
         </div>
+        <br />
         <p>Press Enter to fetch user info:</p>
+        <Results userInfo={this.state.userInfo} />
       </form>
     )
   }
