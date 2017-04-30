@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`results list is rendered with user info object 1`] = `
+exports[`Results component results list is rendered with user info object 1`] = `
 <div
   className="container"
 >
@@ -38,7 +38,7 @@ exports[`results list is rendered with user info object 1`] = `
 </div>
 `;
 
-exports[`results list is rendered without user info object 1`] = `
+exports[`Results component results list is rendered without user info object 1`] = `
 <div>
   Loading...
 </div>
