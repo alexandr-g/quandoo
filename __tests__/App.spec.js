@@ -1,9 +1,11 @@
-/* global describe, it, expect */
+/* eslint-env jest */
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { shallow } from 'enzyme'
 import App from '../src/components/App'
+
+jest.mock('react-select/dist/react-select.css', () => jest.fn())
 
 describe('App', () => {
   it('renders without crashing', () => {
