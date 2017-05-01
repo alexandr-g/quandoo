@@ -13,3 +13,12 @@ describe('#getBio() using Promises', () => {
     })
   })
 })
+
+// using async/await
+describe('#getBio() using async/await', () => {
+  it('should load user data and verify login value', async () => {
+    const data = await api.getBio('alexandr-g')
+    expect(data).toBeDefined()
+    expect(data.login).toEqual('alexandr-g')
+  })
+})
