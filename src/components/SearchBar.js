@@ -1,6 +1,8 @@
 import React from 'react'
 import api from '../utils/api'
 import Results from './Results'
+import Select from 'react-select'
+import 'react-select/dist/react-select.css'
 
 class SearchBar extends React.Component {
   constructor (props) {
@@ -13,8 +15,8 @@ class SearchBar extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange (event) {
-    this.setState({username: event.target.value})
+  handleChange (newValue) {
+    this.setState({username: newValue})
   }
 
   handleSubmit (event) {
@@ -25,14 +27,22 @@ class SearchBar extends React.Component {
   }
 
   render () {
+    const options = [
+      { value: 'alexandr-g', label: 'alexandr-g' },
+      { value: 'btholt', label: 'btholt' },
+      { value: 'coryhouse', label: 'coryhouse' },
+      { value: 'gaearon', label: 'gaearon' }
+    ]
+
     return (
       <form onSubmit={this.handleSubmit}>
         <div className='container-fluid'>
-          <input
-            id='search-input'
-            type='text'
-            className='form-control'
-            placeholder='Search for GitHub user'
+          <Select
+            autofocus
+            simpleValue
+            name='search-input'
+            options={options}
+            placeholder='Search for a GitHub user'
             value={this.state.username}
             onChange={this.handleChange}
           />
