@@ -23,7 +23,6 @@ class SearchBar extends React.Component {
     api.getBio(this.state.username)
       .then((response) => { this.setState({ userInfo: response }) })
     event.preventDefault()
-    this.setState({ username: '' }) // clean input
   }
 
   render () {
