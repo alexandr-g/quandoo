@@ -1,5 +1,5 @@
 import React from 'react'
-import api from '../utils/api'
+import { getBio } from '../utils/api'
 import Results from './Results'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
@@ -20,8 +20,8 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit (event) {
-    api.getBio(this.state.username)
-      .then((response) => { this.setState({ userInfo: response }) })
+    getBio(this.state.username)
+    .then((response) => { this.setState({ userInfo: response }) })
     event.preventDefault()
   }
 
