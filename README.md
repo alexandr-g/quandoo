@@ -55,3 +55,18 @@ Run the linter by executing:
 ```bash
 $ npm run lint
 ```
+
+## Project Structure
+    ├── __tests__                       - Jest unit tests
+    ├── src                             - All the source code
+    │   ├── components                  - React UI components
+    │   ├── utils                       - API helpers
+    │   └── index.js                    - JS entry point
+    ├── .babelrc                        - Babel config to transpile ES6
+    ├── .eslintrc.json                  - ESLint config
+    ├── .gitignore                      - Ignore files for source control (node_modules, test coverage)
+    ├── index.html                      - HTML file where React app lives
+    ├── package.json                    - List of dependencies, npm scripts, author etc.
+    ├── README.md                       - Project Overview and instruction how to run, test, lint
+    ├── webpack.config.js               - Webpack build steps/config
+    ├── yarn.lock                       - Locked project dependencies
