@@ -7,6 +7,10 @@
     "node": ">=5"
   },
   "main": "index.js",
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": ["<rootDir>/__tests__/__mocks__/"]
+  },
   "scripts": {
     "test": "jest",
     "lint": "eslint src/**/*.js webpack.config.js",
