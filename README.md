@@ -25,6 +25,11 @@ $ git clone https://github.com/alexandr-g/quandoo.git
 
 **Install project dependencies:**
 ```bash
+$ yarn
+```
+or
+
+```bash
 $ npm i
 ```
 
@@ -45,7 +50,7 @@ Open `http://localhost:8080` in your browser that will serve webpack output with
 Run the tests using Jest including snapshot tests:
 
 ```bash
-$ npm run test
+$ npm t
 ```
 
 #### Linting
