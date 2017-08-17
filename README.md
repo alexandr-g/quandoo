@@ -35,12 +35,12 @@ $ npm i
 
 **Build a valid js bundle:**
 ```bash
-$ npm run build
+$ yarn build
 ```
 
 **To start the project in development mode:**
 ```bash
-$ npm run dev
+$ yarn dev
 ```
 
 Open `http://localhost:8080` in your browser that will serve webpack output with running app
@@ -50,7 +50,7 @@ Open `http://localhost:8080` in your browser that will serve webpack output with
 Run the tests using Jest including snapshot tests:
 
 ```bash
-$ npm t
+$ npm t or yarn test
 ```
 
 #### Linting
@@ -58,7 +58,7 @@ $ npm t
 Run the linter by executing:
 
 ```bash
-$ npm run lint
+$ yarn lint
 ```
 
 ## Project Structure
