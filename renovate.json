@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "timezone": null,
+  "schedule": [],
+  "pinVersions": true,
+  "dependencies": { "pinVersions": false },
+  "automerge": "none",
+  "branchName": "renovate/{{depName}}-{{newVersionMajor}}.x",
+  "commitMessage": "{{semanticPrefix}}Update dependency {{depName}} to version {{newVersion}}",
+  "labels": ["automated-update", "chore"]
+}
