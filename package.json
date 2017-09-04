@@ -14,7 +14,7 @@
     "collectCoverage": true
   },
   "scripts": {
-    "test": "jest && codecov",
+    "test": "node_modules/.bin/jest && codecov",
     "lint": "eslint src/**/*.js webpack.config.js",
     "build": "webpack",
     "watch": "npm run build -- --watch",
