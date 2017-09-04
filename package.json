@@ -9,10 +9,12 @@
   "main": "index.js",
   "jest": {
     "verbose": true,
-    "testPathIgnorePatterns": ["<rootDir>/__tests__/__mocks__/"]
+    "testPathIgnorePatterns": ["<rootDir>/__tests__/__mocks__/"],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest && codecov --token=$CODECOV_TOKEN",
     "lint": "eslint src/**/*.js webpack.config.js",
     "build": "webpack",
     "watch": "npm run build -- --watch",
@@ -23,8 +25,8 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-select": "^1.0.0-rc.3",
-    "react-input-autosize": "1.1.4"
+    "react-input-autosize": "1.1.4",
+    "react-select": "^1.0.0-rc.3"
   },
   "devDependencies": {
     "babel": "6.23.0",
@@ -33,6 +35,7 @@
     "babel-loader": "7.1.2",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
+    "codecov": "^2.3.0",
     "css-loader": "0.28.7",
     "enzyme": "2.9.1",
     "eslint": "4.6.0",
