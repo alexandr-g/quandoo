@@ -11,7 +11,8 @@
     "verbose": true,
     "testPathIgnorePatterns": ["<rootDir>/__tests__/__mocks__/"],
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "moduleFileExtensions": ["js", "json"]
   },
   "scripts": {
     "test": "node_modules/.bin/jest && codecov",
