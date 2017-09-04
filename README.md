@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/alexandr-g/quandoo.svg?branch=master)](https://travis-ci.org/alexandr-g/quandoo)
+[![codecov](https://codecov.io/gh/alexandr-g/quandoo/branch/master/graph/badge.svg)](https://codecov.io/gh/alexandr-g/quandoo)
 
 ## Overview 
 This is a candidate task for Quandoo.
