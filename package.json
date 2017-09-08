@@ -44,7 +44,7 @@
     "codecov": "2.3.0",
     "css-loader": "0.28.7",
     "enzyme": "2.9.1",
-    "eslint": "4.6.0",
+    "eslint": "4.6.1",
     "eslint-config-standard": "10.2.1",
     "eslint-config-standard-jsx": "4.0.2",
     "eslint-config-standard-react": "5.0.0",
