@@ -31,7 +31,7 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-input-autosize": "1.1.5",
+    "react-input-autosize": "1.2.0",
     "react-select": "^1.0.0-rc.3"
   },
   "devDependencies": {
