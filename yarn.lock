@@ -3970,8 +3970,8 @@ p-locate@^2.0.0:
     p-limit "^1.1.0"
 
 p-map@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.1.1.tgz#05f5e4ae97a068371bc2a5cc86bfbdbc19c4ae7a"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
 
 pako@~0.2.0:
   version "0.2.9"
@@ -4511,20 +4511,20 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-input-autosize@1.2.0, react-input-autosize@^1.1.5:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.2.0.tgz#87241071159f742123897691da6796ec33b57d05"
+react-input-autosize@2.0.0, react-input-autosize@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.0.0.tgz#c0268a5385b595a1ee197b1e532fa61a52334841"
   dependencies:
     create-react-class "^15.5.2"
     prop-types "^15.5.8"
 
 react-select@^1.0.0-rc.3:
-  version "1.0.0-rc.7"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.7.tgz#fab65abb7a6d51ccdde51d6ff6b594018fc208bc"
+  version "1.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.8.tgz#83284bab6486228a0e2cb55702a314073fb1775c"
   dependencies:
     classnames "^2.2.4"
     prop-types "^15.5.8"
-    react-input-autosize "^1.1.5"
+    react-input-autosize "^2.0.0"
 
 react-test-renderer@15.6.1:
   version "15.6.1"
