@@ -4511,20 +4511,20 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-input-autosize@2.0.0, react-input-autosize@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.0.0.tgz#c0268a5385b595a1ee197b1e532fa61a52334841"
+react-input-autosize@2.0.1, react-input-autosize@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.0.1.tgz#e92190497b4026c2780ad0f2fd703c835ba03e33"
   dependencies:
     create-react-class "^15.5.2"
     prop-types "^15.5.8"
 
 react-select@^1.0.0-rc.3:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.8.tgz#83284bab6486228a0e2cb55702a314073fb1775c"
+  version "1.0.0-rc.9"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.9.tgz#427e39369674c5a8163dc8dc55eb79e1c850272a"
   dependencies:
     classnames "^2.2.4"
     prop-types "^15.5.8"
-    react-input-autosize "^2.0.0"
+    react-input-autosize "^2.0.1"
 
 react-test-renderer@15.6.1:
   version "15.6.1"
