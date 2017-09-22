@@ -13,25 +13,37 @@ exports[`Results component results list is rendered with user info object 1`] = 
       <li
         className="list-group-item"
       >
-        Name: 
+        <b>
+          Name:
+        </b>
+         
         test
       </li>
       <li
         className="list-group-item"
       >
-        Login: 
+        <b>
+          Login:
+        </b>
+         
         test login
       </li>
       <li
         className="list-group-item"
       >
-        Location: 
+        <b>
+          Location:
+        </b>
+         
         planet earth
       </li>
       <li
         className="list-group-item"
       >
-        Bio: 
+        <b>
+          Bio:
+        </b>
+         
       </li>
     </ul>
   </div>

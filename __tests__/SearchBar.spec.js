@@ -8,13 +8,21 @@ import 'isomorphic-fetch'
 jest.mock('react-select/dist/react-select.css', () => jest.fn())
 
 describe('SearchBar', () => {
+  let component
+
+  beforeEach(() => {
+    component = shallow(<SearchBar />)
+  })
+
   it('should render a `form`', () => {
-    const component = shallow(<SearchBar />)
     expect(component.find('form')).toBeTruthy()
   })
 
-  it('should render p with a text', () => {
-    const component = shallow(<SearchBar />)
-    expect(component.find('p').text()).toEqual('Press Enter to fetch user info:')
+  it('should render one div with Select', () => {
+    expect(component.find('div').find('Select')).toBeTruthy()
+  })
+
+  it('should render two p with a text', () => {
+    expect(component.find('p').length).toEqual(2)
   })
 })
