@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
 
   handleSubmit (event) {
     getBio(this.state.username)
-    .then((response) => { this.setState({ userInfo: response }) })
+      .then((response) => { this.setState({ userInfo: response }) })
     event.preventDefault()
   }
 
@@ -47,7 +47,8 @@ class SearchBar extends React.Component {
           />
         </div>
         <br />
-        <p>Press Enter to fetch user info:</p>
+        <p>1. Select user from drop-down or start typing username</p>
+        <p>2. Press <b>Enter</b> to fetch user information from <b>GitHub</b></p>
         <Results userInfo={this.state.userInfo} />
       </form>
     )

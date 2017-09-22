@@ -12,10 +12,10 @@ const Results = ({ userInfo }) => {
     <div className='container'>
       <div className='card-block'>
         <ul className='list-group'>
-          <li className='list-group-item'>Name: {name}</li>
-          <li className='list-group-item'>Login: {login}</li>
-          <li className='list-group-item'>Location: {location}</li>
-          <li className='list-group-item'>Bio: {bio}</li>
+          <li className='list-group-item'><b>Name:</b> {name}</li>
+          <li className='list-group-item'><b>Login:</b> {login}</li>
+          <li className='list-group-item'><b>Location:</b> {location}</li>
+          <li className='list-group-item'><b>Bio:</b> {bio}</li>
         </ul>
       </div>
     </div>
