@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SearchBar from '../src/components/SearchBar'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import 'isomorphic-fetch'
 
 jest.mock('react-select/dist/react-select.css', () => jest.fn())
@@ -11,7 +11,7 @@ describe('SearchBar', () => {
   let component
 
   beforeEach(() => {
-    component = shallow(<SearchBar />)
+    component = mount(<SearchBar />)
   })
 
   it('should render a `form`', () => {
