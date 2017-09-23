@@ -1,58 +1,40 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { compose, withState, withHandlers } from 'recompose'
 import { getBio } from '../utils/api'
 import Results from './Results'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
 
-class SearchBar extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      username: '',
-      userInfo: {}
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
+const options = [
+  { value: 'alexandr-g', label: 'alexandr-g' },
+  { value: 'btholt', label: 'btholt' },
+  { value: 'coryhouse', label: 'coryhouse' },
+  { value: 'gaearon', label: 'gaearon' }
+]
 
-  handleChange (newValue) {
-    this.setState({username: newValue})
-  }
+const SearchBar = ({ username, setUsername, userInfo, handleSubmit, handleChange }) => (
+  <form onSubmit={handleSubmit}>
+    <div className='container-fluid'>
+      <Select
+        autofocus
+        simpleValue
+        name='search-input'
+        options={options}
+        placeholder='Search for a GitHub user'
+        value={username}
+        onChange={handleChange}
+      />
+    </div>
+    <br />
+    <p>1. Select user from drop-down or start typing username</p>
+    <p>
+      2. Press <b>Enter</b> to fetch user information from <b>GitHub</b>
+    </p>
+    <Results userInfo={userInfo} />
+  </form>
+)
 
-  handleSubmit (event) {
-    getBio(this.state.username)
-      .then((response) => { this.setState({ userInfo: response }) })
-    event.preventDefault()
-  }
-
-  render () {
-    const options = [
-      { value: 'alexandr-g', label: 'alexandr-g' },
-      { value: 'btholt', label: 'btholt' },
-      { value: 'coryhouse', label: 'coryhouse' },
-      { value: 'gaearon', label: 'gaearon' }
-    ]
-
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <div className='container-fluid'>
-          <Select
-            autofocus
-            simpleValue
-            name='search-input'
-            options={options}
-            placeholder='Search for a GitHub user'
-            value={this.state.username}
-            onChange={this.handleChange}
-          />
-        </div>
-        <br />
-        <p>1. Select user from drop-down or start typing username</p>
-        <p>2. Press <b>Enter</b> to fetch user information from <b>GitHub</b></p>
-        <Results userInfo={this.state.userInfo} />
-      </form>
-    )
-  }
 SearchBar.propTypes = {
   username: PropTypes.string,
   userInfo: PropTypes.object,
@@ -61,4 +43,14 @@ SearchBar.propTypes = {
   setUsername: PropTypes.func
 }
 
-export default SearchBar
+export default compose(
+  withState('username', 'setUsername', ''),
+  withState('userInfo', 'setUserInfo', {}),
+  withHandlers({
+    handleChange: ({ setUsername }) => newValue => setUsername(newValue),
+    handleSubmit: ({ username, setUserInfo }) => event => {
+      getBio(username).then(response => setUserInfo(response))
+      event.preventDefault()
+    }
+  })
+)(SearchBar)
