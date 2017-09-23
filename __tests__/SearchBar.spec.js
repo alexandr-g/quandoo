@@ -7,7 +7,7 @@ import 'isomorphic-fetch'
 
 jest.mock('react-select/dist/react-select.css', () => jest.fn())
 
-describe('SearchBar', () => {
+describe.only('SearchBar', () => {
   let component
 
   beforeEach(() => {
@@ -24,5 +24,28 @@ describe('SearchBar', () => {
 
   it('should render two p with a text', () => {
     expect(component.find('p').length).toEqual(2)
+  })
+
+  it('should have onChange handler in Select', () => {
+    expect(component.find('div').find('Select').props()).toHaveProperty('onChange')
+  })
+
+  it('Select should have autofocus', () => {
+    expect(component.find('div').find('Select').prop('autofocus')).toEqual(true)
+  })
+
+  it('should have onChange value in Select', () => {
+    expect(component.find('div').find('Select').prop('value')).toEqual('')
+  })
+
+  it('should have options', () => {
+    expect(component.find('div').find('Select').prop('options')).toEqual(
+      [
+        { value: 'alexandr-g', label: 'alexandr-g' },
+        { value: 'btholt', label: 'btholt' },
+        { value: 'coryhouse', label: 'coryhouse' },
+        { value: 'gaearon', label: 'gaearon' }
+      ]
+    )
   })
 })
