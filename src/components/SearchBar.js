@@ -53,6 +53,12 @@ class SearchBar extends React.Component {
       </form>
     )
   }
+SearchBar.propTypes = {
+  username: PropTypes.string,
+  userInfo: PropTypes.object,
+  handleSubmit: PropTypes.func,
+  handleChange: PropTypes.func,
+  setUsername: PropTypes.func
 }
 
 export default SearchBar
