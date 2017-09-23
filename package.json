@@ -32,7 +32,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-input-autosize": "2.0.1",
-    "react-select": "^1.0.0-rc.3"
+    "react-select": "^1.0.0-rc.3",
+    "recompose": "^0.25.0"
   },
   "devDependencies": {
     "babel": "6.23.0",
