@@ -13,7 +13,7 @@ const options = [
   { value: 'gaearon', label: 'gaearon' }
 ]
 
-const SearchBar = ({ username, setUsername, userInfo, handleSubmit, handleChange }) => (
+const SearchBar = ({ username, userInfo, handleSubmit, handleChange }) => (
   <form onSubmit={handleSubmit}>
     <div className='container-fluid'>
       <Select
@@ -39,8 +39,7 @@ SearchBar.propTypes = {
   username: PropTypes.string,
   userInfo: PropTypes.object,
   handleSubmit: PropTypes.func,
-  handleChange: PropTypes.func,
-  setUsername: PropTypes.func
+  handleChange: PropTypes.func
 }
 
 export default compose(
