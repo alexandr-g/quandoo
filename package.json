@@ -29,7 +29,7 @@
   "author": "Alexander Grischuk",
   "license": "MIT",
   "dependencies": {
-    "react": "^15.5.4",
+    "react": "^16.0.0",
     "react-dom": "^15.5.4",
     "react-input-autosize": "2.0.1",
     "react-select": "^1.0.0-rc.3",
