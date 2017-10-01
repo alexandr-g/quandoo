@@ -2,8 +2,11 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { shallow } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import App from '../src/components/App'
+
+Enzyme.configure({ adapter: new Adapter() })
 
 jest.mock('react-select/dist/react-select.css', () => jest.fn())
 
