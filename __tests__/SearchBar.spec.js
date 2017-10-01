@@ -1,9 +1,13 @@
 /* global describe, it, expect, jest */
 
 import React from 'react'
-import SearchBar from '../src/components/SearchBar'
-import { mount } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import 'isomorphic-fetch'
+
+import SearchBar from '../src/components/SearchBar'
+
+Enzyme.configure({ adapter: new Adapter() })
 
 jest.mock('react-select/dist/react-select.css', () => jest.fn())
 
