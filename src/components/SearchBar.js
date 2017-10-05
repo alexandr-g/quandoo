@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStateHandlers } from 'recompose'
+import { compose, withState, withHandlers, withStateHandlers } from 'recompose'
 import { getBio } from '../utils/api'
 import Results from './Results'
 import Select from 'react-select'
@@ -14,6 +14,7 @@ const options = [
 ]
 
 const SearchBar = ({ username, userInfo, handleSubmit, handleChange }) => (
+  !console.log('userInfo', userInfo) &&
   <form onSubmit={handleSubmit}>
     <div className='container-fluid'>
       <Select
@@ -42,16 +43,19 @@ SearchBar.propTypes = {
   handleChange: PropTypes.func
 }
 
-export default withStateHandlers(
-  ({ initialUsername = '', initialUserInfo = {} }) => ({
-    username: initialUsername,
-    userInfo: initialUserInfo
-  }), {
-    handleChange: ({ username }) => newValue => ({ username: newValue }),
-    handleSubmit: ({ username, userInfo }) => event => {
-      getBio(username).then(response => ({ userInfo: response }),
-        event.preventDefault()
-      )
+export default compose(
+  withState('userInfo', 'setUserInfo', {}),
+  withStateHandlers(
+    ({ initialUsername = '' }) => ({
+      username: initialUsername
+    }), {
+      handleChange: ({ username }) => newValue => ({ username: newValue })
     }
-  }
+  ),
+  withHandlers({
+    handleSubmit: ({ username, userInfo, setUserInfo }) => event => {
+      getBio(username).then(response => setUserInfo(response))
+      event.preventDefault()
+    }
+  })
 )(SearchBar)
