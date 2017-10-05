@@ -14,7 +14,6 @@ const options = [
 ]
 
 const SearchBar = ({ username, userInfo, handleSubmit, handleChange }) => (
-  !console.log('userInfo', userInfo) &&
   <form onSubmit={handleSubmit}>
     <div className='container-fluid'>
       <Select
