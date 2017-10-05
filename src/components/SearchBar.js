@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compose, withState, withHandlers, withStateHandlers } from 'recompose'
+import { compose, withHandlers, withStateHandlers } from 'recompose'
 import { getBio } from '../utils/api'
 import Results from './Results'
 import Select from 'react-select'
@@ -44,12 +44,13 @@ SearchBar.propTypes = {
 }
 
 export default compose(
-  withState('userInfo', 'setUserInfo', {}),
   withStateHandlers(
     ({ initialUsername = '' }) => ({
-      username: initialUsername
+      username: initialUsername,
+      userInfo: {}
     }), {
-      handleChange: ({ username }) => newValue => ({ username: newValue })
+      handleChange: ({ username }) => newValue => ({ username: newValue }),
+      setUserInfo: () => userInfo => ({ userInfo })
     }
   ),
   withHandlers({
