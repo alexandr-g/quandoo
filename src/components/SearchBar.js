@@ -1,17 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compose, withHandlers, withStateHandlers } from 'recompose'
-import { getBio } from '../utils/api'
-import Results from './Results'
 import Select from 'react-select'
-import 'react-select/dist/react-select.css'
 
-const options = [
-  { value: 'alexandr-g', label: 'alexandr-g' },
-  { value: 'btholt', label: 'btholt' },
-  { value: 'coryhouse', label: 'coryhouse' },
-  { value: 'gaearon', label: 'gaearon' }
-]
+import { getBio } from '../utils/api'
+import { options } from '../utils/options'
+
+import Results from './Results'
+
+import 'react-select/dist/react-select.css'
 
 const SearchBar = ({ username, userInfo, handleSubmit, handleChange }) => (
   <form onSubmit={handleSubmit}>
