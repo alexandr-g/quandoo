@@ -52,6 +52,6 @@ exports[`Results component results list is rendered with user info object 1`] = 
 
 exports[`Results component results list is rendered without user info object 1`] = `
 <div>
-  Loading...
+  Sorry, something went wrong.
 </div>
 `;
