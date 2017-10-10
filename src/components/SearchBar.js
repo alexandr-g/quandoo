@@ -7,29 +7,32 @@ import { getBio } from '../utils/api'
 import { options } from '../utils/options'
 
 import Results from './Results'
+import MyErrorBoundary from './MyErrorBoundary'
 
 import 'react-select/dist/react-select.css'
 
 const SearchBar = ({ username, userInfo, handleSubmit, handleChange }) => (
-  <form onSubmit={handleSubmit}>
-    <div className='container-fluid'>
-      <Select
-        autofocus
-        simpleValue
-        name='search-input'
-        options={options}
-        placeholder='Search for a GitHub user'
-        value={username}
-        onChange={handleChange}
-      />
-    </div>
-    <br />
-    <p>1. Select user from drop-down or start typing username</p>
-    <p>
-      2. Press <b>Enter</b> to fetch user information from <b>GitHub</b>
-    </p>
-    <Results userInfo={userInfo} />
-  </form>
+  <MyErrorBoundary>
+    <form onSubmit={handleSubmit}>
+      <div className='container-fluid'>
+        <Select
+          autofocus
+          simpleValue
+          name='search-input'
+          options={options}
+          placeholder='Search for a GitHub user'
+          value={username}
+          onChange={handleChange}
+        />
+      </div>
+      <br />
+      <p>1. Select user from drop-down or start typing username</p>
+      <p>
+        2. Press <b>Enter</b> to fetch user information from <b>GitHub</b>
+      </p>
+      <Results userInfo={userInfo} />
+    </form>
+  </MyErrorBoundary>
 )
 
 SearchBar.propTypes = {
