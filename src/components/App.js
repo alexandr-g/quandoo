@@ -1,12 +1,23 @@
 import React from 'react'
+import styled from 'styled-components'
 import SearchBar from './SearchBar'
 
 export default class App extends React.Component {
   render () {
     return (
-      <div style={{textAlign: 'center'}}>
-        <h1>Quandoo</h1>
+      <Container>
+        <Title>Error Boundaries in React 16</Title>
         <SearchBar />
-      </div>)
+      </Container>
+    )
   }
 }
+
+const Title = styled.h1`
+  padding-top: 20px;
+  padding-bottom: 20px;
+`
+
+const Container = styled.div`
+  text-align: center;
+`
