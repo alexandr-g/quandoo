@@ -13,7 +13,7 @@ class MyErrorBoundary extends Component {
   /* eslint handle-callback-err: "warn" */
   componentDidCatch (error, info) {
     this.setState(state => ({ ...state, hasError: true }))
-    // in real life send to reporting
+    // in real life send to error reporting service
     console.log(error, info)
   }
 
