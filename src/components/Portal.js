@@ -12,3 +12,5 @@ const Portal = () => (
 )
 
 ReactDOM.render(<Portal />, document.getElementById('portal-container'))
+
+// Render Elements Outside the Current React Tree using Portals

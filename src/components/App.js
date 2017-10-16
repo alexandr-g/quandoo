@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import SearchBar from './SearchBar'
+// import String from './String'
+// import Fruits from './Fruits'
+// import Portal from './Portal'
 
 export default class App extends React.Component {
   render () {
