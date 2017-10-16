@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { compose, withHandlers, withStateHandlers } from 'recompose'
 import Select from 'react-select'
 
-import { getBio } from '../utils/api'
-import { options } from '../utils/options'
+import { getBio, options } from '../utils'
 
 import Results from './Results'
 import MyErrorBoundary from './MyErrorBoundary'
