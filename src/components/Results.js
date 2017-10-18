@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import MyErrorBoundary from './MyErrorBoundary'
 
 const Results = ({ userInfo }) => {
   const { name, login, location, bio } = userInfo
 
   return (
-    <MyErrorBoundary>
       <div className='container'>
         <div className='card-block'>
           <ul className='list-group'>
@@ -26,7 +24,6 @@ const Results = ({ userInfo }) => {
           </ul>
         </div>
       </div>
-    </MyErrorBoundary>
   )
 }
 
