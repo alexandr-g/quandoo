@@ -1637,7 +1637,7 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-cypress@^1.1.1:
+cypress@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-1.1.1.tgz#e7854aad74a4abc12e63f7f486f7990624ff9346"
   dependencies:
@@ -2131,7 +2131,7 @@ eslint-module-utils@^2.1.1:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-cypress@^1.1.0:
+eslint-plugin-cypress@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-cypress/-/eslint-plugin-cypress-1.1.0.tgz#46ee4f487bc3b9a415ecd6af0d301c158f9b72c1"
 
