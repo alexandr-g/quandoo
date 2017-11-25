@@ -1,4 +1,5 @@
 {
   "extends": ["standard", "standard-react"],
-  "env": { "browser": true }
+  "env": { "browser": true },
+  "plugins": ["cypress"]
 }
