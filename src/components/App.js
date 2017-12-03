@@ -6,7 +6,7 @@ export default class App extends React.Component {
   render () {
     return (
       <Container>
-        <Title>Error Boundaries in React 16</Title>
+        <Title>Quandoo</Title>
         <SearchBar />
       </Container>
     )
