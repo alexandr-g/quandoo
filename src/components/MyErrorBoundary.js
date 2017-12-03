@@ -1,3 +1,4 @@
+/* eslint handle-callback-err: "warn" */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -9,11 +10,9 @@ class MyErrorBoundary extends Component {
       hasError: false
     }
   }
-
-  /* eslint handle-callback-err: "warn" */
   componentDidCatch (error, info) {
     this.setState(state => ({ ...state, hasError: true }))
-    // in real life send to reporting
+    // in production send this to error reporting service - (Sentry, TrackJS)
     console.log(error, info)
   }
 
