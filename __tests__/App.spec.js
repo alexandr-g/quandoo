@@ -1,5 +1,4 @@
 /* eslint-env jest */
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Enzyme, { shallow } from 'enzyme'
@@ -18,6 +17,6 @@ describe('App', () => {
 
   it('renders h1 inside App with a Quandoo value', () => {
     const component = shallow(<App />)
-    expect(component.find('h1').text()).toEqual('Quandoo')
+    expect(component.children().at(0).children().text()).toEqual('Quandoo')
   })
 })
