@@ -5618,9 +5618,9 @@ react-dom@^16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-input-autosize@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.0.tgz#2f2431a1213b45308c94304a54ff9385a4edcad9"
+react-input-autosize@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.1.tgz#ec428fa15b1592994fb5f9aa15bb1eb6baf420f8"
   dependencies:
     prop-types "^15.5.8"
 
