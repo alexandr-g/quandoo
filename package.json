@@ -62,7 +62,7 @@
     "eslint-plugin-standard": "3.0.1",
     "jest": "22.1.4",
     "react-test-renderer": "16.2.0",
-    "style-loader": "0.19.1",
+    "style-loader": "0.20.1",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.11.0"
   }
