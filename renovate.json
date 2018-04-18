@@ -2,7 +2,6 @@
   "extends": ["config:base"],
   "automerge": "none",
   "branchName": "renovate/{{depName}}-{{newVersionMajor}}.x",
-  "commitMessage":
-    "{{semanticPrefix}}Update dependency {{depName}} to version {{newVersion}}",
+  "commitMessage": "Update dependency {{depName}} to version {{newVersion}}",
   "labels": ["automated-update", "renovate"]
 }
