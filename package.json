@@ -25,8 +25,8 @@
   "author": "Alexander Grischuk",
   "license": "MIT",
   "dependencies": {
+    "react-dom": "16.5.1",
     "react": "16.5.1",
-    "react-dom": "16.3.2",
     "react-input-autosize": "2.2.1",
     "react-select": "^1.0.0-rc.3",
     "recompose": "0.28.2",
