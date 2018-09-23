@@ -1,4 +1,5 @@
 const path = require('path')
+const nodeModulesPath = path.resolve(__dirname, 'node_modules')
 
 module.exports = env => {
   const mode = env.TARGET_ENV === 'development' ? 'development' : 'production'
@@ -13,7 +14,7 @@ module.exports = env => {
       filename: 'bundle.js'
     },
     resolve: {
-      extensions: ['.js', '.json']
+      extensions: ['.js', '.json', '.tsx']
     },
     stats: {
       colors: true,
@@ -26,12 +27,17 @@ module.exports = env => {
           enforce: 'pre',
           test: /\.js$/,
           loader: 'eslint-loader',
-          exclude: /node_modules/
+          exclude: [/node_modules/, nodeModulesPath]
         },
         {
           include: path.resolve(__dirname, 'src'),
           test: /\.(js|jsx)$/,
           loader: 'babel-loader'
+        },
+        {
+          test: /\.tsx?$/,
+          loaders: ['babel-loader', 'ts-loader'],
+          exclude: [/node_modules/, nodeModulesPath]
         },
         {
           test: /\.css$/,
