@@ -1,8 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Results = ({ userInfo }) => {
+interface Props {
+  userInfo: {
+    name: string,
+    login: string,
+    location: string,
+    bio: string,
+  }
+}
+
+const Results = ({ userInfo }: Props) => {
   const { name, login, location, bio } = userInfo
 
   return (
@@ -25,10 +33,6 @@ const Results = ({ userInfo }) => {
       </div>
     </div>
   )
-}
-
-Results.propTypes = {
-  userInfo: PropTypes.object
 }
 
 const TextTile = styled.span`
