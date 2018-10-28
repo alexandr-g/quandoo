@@ -47,12 +47,12 @@ export default compose(
       username: initialUsername,
       userInfo: {}
     }), {
-      handleChange: ({ username }) => newValue => ({ username: newValue }),
+      handleChange: () => newValue => ({ username: newValue }),
       setUserInfo: () => userInfo => ({ userInfo })
     }
   ),
   withHandlers({
-    handleSubmit: ({ username, userInfo, setUserInfo }) => event => {
+    handleSubmit: ({ username, setUserInfo }) => event => {
       getBio(username).then(response => setUserInfo(response))
       event.preventDefault()
     }
